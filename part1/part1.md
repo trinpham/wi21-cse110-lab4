@@ -1,0 +1,12 @@
+wi21-cse1100-lab04
+1. Line 11 will print out the length of the `prices` array. This is because `i` is defined with `var` within the function so `i` has function scope and can be accessed throughout the function. `i` is incremented at each iteration. The iteration continues until `i` is equal to the `prices` array. In other words, the last iteration is when `i` is equal to `prices.length` - 1. At the end of this iteration, `i` is incremented to `prices.length`. Thus, `console.log(i)` outputs the length of the `prices` array.
+
+2. Line 12 will print out the discounted price of the last item of the `prices` array. `discountedPrice` is defined with `var` within the function so `discountedPrice` has function scope and can be accessed throughout the function. The loop iterates through the `prices` array and at each iteration, `discountedPrice` is set to the discounted price for the current item in the list. Thus, when the loop is exited, `discountedPrice` is the discounted price for the last item in the list. The discounted price is the price of the item * (1 - discount).
+
+3. Line 13 will print out the final price of the last item of the `prices` array. It outputs the final price of the last item because `finalPrice` is last set to the final price of the last item. `finalPrice` is defined with `var` within the function so `finalPrice` has function scope and can be accessed throughout the function. `finalPrice` is `discountedPrice` rounded to 2 decimal places.
+
+4. The function will return `[50, 100, 150]` if we call `discountPrices([100, 200, 300], .5)`. This is the updated price of the input array, `[100, 200, 300]`, after the discount of 0.5 on each item rounded to two decimal places. There is a 50% discount of all the items. Thus, the prices after discount will be `[50, 100, 150]`. Next, the function rounds each price to 2 decimal places. Thus, the updated price is `[50, 100, 150]`. At each iteration, the function pushes the updated price into a new array and returns it.
+
+5. Line 11 will throw an error because `i` is defined with `let` within the for-loop. Thus, `i`'s scope is restricted to the for-loop. `i` cannot be accessed in line 11. Thus, line 11 results in an error.
+
+6. Line 12 will throw an error because `discountedPrice` is defined with `let` within the for-loop. Thus, `discountedPrice`'s scope is restricted to the for-loop. `discountedPrice` cannot be accessed in line 12. Thus, line 12 results in an error.
