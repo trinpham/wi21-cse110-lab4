@@ -53,4 +53,24 @@
   - E. true == 2 -> `false` because we are comparing 2 different types. So `true` becomes a numeric 0 and numeric 0 is not equal to 1.
   - F. true === Boolean(2) -> `true` because even though the comparison uses a string equality operator, 2 is explictly casted to a boolean type. Thus, Boolean(2) is `true` because it is non-zero. `true` is equal to `true`.
 
-16. 
+16. The difference between the `==` and `===` operators is that `==` checks equality with type conversion (objects being compared do not have to be the same type for equality) while `===` checks equality without type conversion (types have to be the same for equality).
+
+#### conditionals
+17. The string, `'How are you?'`, will get printed because the first if-statement checks if `2` is equal to `true`. Since the objects being compared are of different types, `true` is converted to a numeric 0. `2` is not equal to `0`, so we go to the next conditional. The next conditional is `2`. Since the conditional looks for a boolean, `2` is converted to a boolean. `2` is a non-zero number, so `2` is converted to `true`. Thus, the block within the conditional is run and `'How are you?'` is printed.
+
+#### loops
+18. see part1-question18.js
+
+#### functions
+19. The result of `newArr` will be `[6, 8, 10]` with the following parameters `modifyArray([1,2,3], doSomething)`. This is because the `array` parameter is `[1,2,3]` while the `callback` parameter is `doSomething`. The for-loop within `modifyArray` iterates through `array`, applies `doSomething` to each element in the array, and pushes it to the new array being returned. `doSomething` calls another function, which multiplies the object + 2 by 2. Thus, 1, for example, will result in 6 because (1 + 2) * 2 = 6.
+
+#### setInterval(), setTimeout(), clearTimeout()
+20. see part1-question20.js
+
+21. 
+`
+1
+4
+3
+2
+`
