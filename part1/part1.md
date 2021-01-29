@@ -34,4 +34,23 @@
   - E. `student.courseload[0]`
 
 #### basic operators & type conversion
-14. A. '3' + 2 -> '32'
+14.
+  - A. '3' + 2 -> `'32'` because `'3'` is a string and `+` concatenates strings, so `2` is converted to a string and concatenated with `'3'`.
+  - B. '3' - 2 -> `1` because there is no `-` for strings. Thus, `'3'` is converted to a numeric and then 2 is subtracted from the numeric 3.
+  - C. 3 + null -> `3` because `3` is a numeric 3 and `+` adds numerics, so `null` is converted to a numeric null, which has a value of 0. Thus, 0 is added to 3.
+  - D. '3' + null -> `'3null'` because `'3'` is a string and '+' concatenates strings, so `null` is converted to a string, which is `'null'` and concantenated to `'3'`.
+  - E. true + 3 -> `4` because there is not `+` for booleans and `3` is a numeric. So, `true` is converted to a numeric. `true` has a value of 1. Then, 3 is added to 1.
+  - F. false + null -> `0` because there is no `+` operation for booleans and null. However, `false` and `null` can be converted to numerics and numerics have a `+` operation. `false` has a numeric value of 0 and `null` has a numeric value of 0. The values are added together.
+  - G. "3" + undefined -> `'3undefined'` because `"3"` is a string and `+` concatenates strings. So `undefined` is converted to a string and concatenated to `"3"`. Additionally, single quote and double quotes can be used to indicate strings.
+  - H. "3" - undefined -> `NaN` because there is no `-` operation for strings. Thus, `"3"` is converted to a numeric. `undefined` is also converted to a numeric. `undefined` has a numeric value of `NaN`. A number minus `NaN` is `NaN`.
+
+15.
+  - A. '2' > 1 -> `true` because we are comparing 2 different types. So `'2'` becomes a numeric and numeric 2 is greater than 1.
+  - B. '2' < '12' -> `false` because `'2'` and `'12'` are both strings, so we can compare them lexicographically. Since `'2'` is lexicographically greater than 
+  - B. '2' < '12' -> `false` because `'2'` and `'12'` are both strings, so we can compare them lexicographically character by character. Since `'2'` is lexicographically greater than `'1'`, `'2'` is lexicographically greater than `'12'`.
+  - C. 2 == '2' -> `true` because we are comparing 2 different types, so `'2'` becomes a numeric and numeric 2 is equal to numeric 2.
+  - D. 2 === '2' -> `false` because `===` is a string equality operator that checks the equality without type conversion. If the objects that are being compared are of different types, then it immediately returns `false`.
+  - E. true == 2 -> `false` because we are comparing 2 different types. So `true` becomes a numeric 0 and numeric 0 is not equal to 1.
+  - F. true === Boolean(2) -> `true` because even though the comparison uses a string equality operator, 2 is explictly casted to a boolean type. Thus, Boolean(2) is `true` because it is non-zero. `true` is equal to `true`.
+
+16. 
